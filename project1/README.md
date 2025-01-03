@@ -14,6 +14,6 @@ This should create the executable. To run the executable you need to introduce a
 ## Citations.
 
 ## Credits.
-1. Ander Aleson.
+1. [Ander Aleson.](https://github.com/AnderAleson)
 2. Lucia Vidal.
-3. Alvaro Serrano.
+3. [Alvaro Serrano.](https://github.com/aserranoTCCM)
