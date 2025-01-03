@@ -6,3 +6,7 @@ To run the code the first step is to compile it
 ```console
 gcc MP2_Lucia_Alvaro_Ander.c -o MP2_Lucia_Alvaro_Ander -ltrexio
 ```
+This should create the executable. To run the executable you need to introduce as first argument the trexio file and second argument the name of the file where the results will be written.
+```console
+./MP2_Lucia_Alvaro_Ander h2o.h5 H2O.out
+```
