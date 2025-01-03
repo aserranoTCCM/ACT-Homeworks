@@ -11,7 +11,19 @@ This should create the executable. To run the executable you need to introduce a
 ./MP2_Lucia_Alvaro_Ander h2o.h5 H2O.out
 ```
 
-## Citations.
+## Bibliography.
+@article{trexio_2023,
+  author = {Posenitskiy, Evgeny and Chilkuri, Vijay Gopal and Ammar, Abdallah and Hapka, Micha{\l} and Pernal, Katarzyna and Shinde, Ravindra and Landinez Borda, Edgar Josu{\'{e}} and Filippi, Claudia and Nakano, Kosuke and Kohul{\'{a}}k, Otto and Sorella, Sandro and de Oliveira Castro, Pablo and Jalby, William and R{\'{\i}}os, Pablo L{\'{o}}pez and Alavi, Ali and Scemama, Anthony},
+  title = {{TREXIO: A file format and library for quantum chemistry}},
+  journal = {J. Chem. Phys.},
+  volume = {158},
+  number = {17},
+  year = {2023},
+  month = may,
+  issn = {0021-9606},
+  publisher = {AIP Publishing},
+  doi = {10.1063/5.0148161}
+}
 
 ## Credits.
 1. [Ander Aleson.](https://github.com/AnderAleson)
