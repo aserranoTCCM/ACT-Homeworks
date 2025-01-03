@@ -1,4 +1,4 @@
-# MP2
+# MP2.
 ## Introduction.
 This code is part of the Advanced Computational Techniques homework. The goal of this project is to compute the energy of different molecules at HF MP2 theory level. For this purpose we made a code in C using the [TREXIO](https://trex-coe.eu/trex-quantum-chemistry-codes/trexio) library.
 ## Runing the code.
@@ -10,3 +10,10 @@ This should create the executable. To run the executable you need to introduce a
 ```console
 ./MP2_Lucia_Alvaro_Ander h2o.h5 H2O.out
 ```
+
+## Citations.
+
+## Credits.
+1. Ander Aleson.
+2. Lucia Vidal.
+3. Alvaro Serrano.
