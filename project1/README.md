@@ -17,5 +17,5 @@ Posenitskiy, E., Chilkuri, V. G., Ammar, A., Hapka, M., Pernal, K., Shinde, R., 
 
 ## Credits.
 1. [Ander Aleson.](https://github.com/AnderAleson)
-2. Lucia Vidal.
+2. [Lucia Vidal.](https://github.com/luvidal-a)
 3. [Alvaro Serrano.](https://github.com/aserranoTCCM)
