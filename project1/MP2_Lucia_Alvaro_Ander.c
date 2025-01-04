@@ -16,6 +16,62 @@
 // 02/01/2025 MP2 Correction done.
 // Try and compare with orca calculations to check if similar resultas are obtained.
 
+// 04/01/2025 generate a section for functions.
+
+
+
+///////////////////////////   FUNCTIONS  //////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
+//FOR BETTER READABILITY
+
+double fcore_hamiltonian(int number_of_MO, double* core_hamiltonian, int number_of_occupied_orbitals ){
+    double E_core_hamiltonian=0.0;
+    for (int i = 0; i < number_of_occupied_orbitals; ++i) {
+        E_core_hamiltonian=E_core_hamiltonian+ 2*core_hamiltonian[i * number_of_MO + i];   
+    }
+    return E_core_hamiltonian;
+}
+
+double ftwo_electron_contibution(double**** integrals_4d, int number_of_occupied_orbitals){
+    double E_two_electron = 0.0;
+    
+    for (int i = 0; i < number_of_occupied_orbitals; i++) { //JUST RUN OVER THE OCCUPIED ORBITALS
+        for (int j = 0; j < number_of_occupied_orbitals; j++) {
+            E_two_electron = E_two_electron+ 2.0 * integrals_4d[i][j][i][j] - integrals_4d[i][j][j][i];
+        }
+    }
+
+    return E_two_electron;
+}
+
+double fMP2(int number_of_occupied_orbitals,int number_of_MO, double**** integrals_4d,double* mo_energy ){
+
+    double MP2_energy=0.0; 
+
+       for (int i = 0; i < number_of_occupied_orbitals; i++) {  //RUN OVER THE OCCUPIED ORBITALS
+        for (int j = 0; j < number_of_occupied_orbitals; j++) {
+            for (int a = number_of_occupied_orbitals; a < number_of_MO; a++){  // RUN OVER VIRTUAL ORBITALS
+                for (int b = number_of_occupied_orbitals; b < number_of_MO; b++){
+                    
+                    MP2_energy=MP2_energy+(integrals_4d[i][j][a][b]*(2*integrals_4d[i][j][a][b]-integrals_4d[i][j][b][a]))/(mo_energy[i]+mo_energy[j]-mo_energy[a]-mo_energy[b]);
+                    
+                }
+            }
+           
+        }
+    }
+
+    return MP2_energy;
+}
+
+
+
+
+
+
+//////////////////////// END FUNCTIONS ///////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -30,6 +86,8 @@ int main(int argc, char* argv[]) {
         fprintf(stderr, "Usage: %s <filename> <output_filename>\n", argv[0]);  // if not show error
         return EXIT_FAILURE;
     }
+
+    
 
     // asign to file name the introduced argument
     const char *filename = argv[1];
@@ -54,6 +112,16 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
 
+    fprintf(output_file,"               ////////////////////                    \n");
+    fprintf(output_file,"               //      MP2       //                    \n");
+    fprintf(output_file,"               ////////////////////                    \n");
+    fprintf(output_file,"                 %s                             ",__DATE__); // show the date
+
+    fprintf(output_file,"\n                 Ander Aleson.                   \n");
+    fprintf(output_file,"                 Lucia Vidal.                    \n");
+    fprintf(output_file,"                 Alvaro Serrano.                 \n");
+    fprintf(output_file,"\n");
+
     // Variable to store the nuclear repulsion energy E_NN
     double nuclear_repulsion;
 
@@ -66,7 +134,7 @@ int main(int argc, char* argv[]) {
     }
 
     // write the nuclear repulsion energy
-    fprintf(output_file,"Nuclear Repulsion Energy: %f a.u. \n", nuclear_repulsion);
+    fprintf(output_file,"Nuclear repulsion energy: %f a.u. \n", nuclear_repulsion);
     
     // Variable to store the number of ocuppied orbitals
     int number_of_occupied_orbitals;
@@ -79,7 +147,7 @@ int main(int argc, char* argv[]) {
     }
  
     // Print the number of ocuppied orbitals.
-    fprintf(output_file,"number of occupied orbitals: %d\n", number_of_occupied_orbitals);
+    fprintf(output_file,"Number of occupied orbitals: %d\n", number_of_occupied_orbitals);
     
     
     
@@ -95,7 +163,7 @@ int main(int argc, char* argv[]) {
     
     // Print the number of Molecular Orbitals
     
-    fprintf(output_file,"number of Molecular Orbitals: %d\n", number_of_MO);
+    fprintf(output_file,"Number of molecular orbitals: %d\n", number_of_MO);
     
     //VARAIBLE TO STORE THE NUMBER OF VIRTUAL_ORBITALS
     int number_of_virtual_orbitals;
@@ -103,16 +171,15 @@ int main(int argc, char* argv[]) {
     //GET THE NUMBER OF VIRTUAL ORBITALS
     number_of_virtual_orbitals=number_of_MO - number_of_occupied_orbitals;
     
-    fprintf(output_file,"number of Virtual Orbitals: %d\n", number_of_virtual_orbitals);
+    fprintf(output_file,"Number of virtual orbitals: %d\n", number_of_virtual_orbitals);
     
-    //VARIABLE TO STORE 1 ELECTRON INTEGRALS +++++++++++++++++++++++++++++++++++++++
+    //VARIABLE TO STORE 1 ELECTRON INTEGRALS 
     
     size_t num_one_e_integrals= (size_t) number_of_MO * (size_t) number_of_MO;
     
     double* core_hamiltonian = (double*) malloc(num_one_e_integrals * sizeof(double));
    
     // SHOW ALERT IF MEMORY ALLOCATION FAILS.
-    
     if (core_hamiltonian == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
         trexio_close(trexio_file);
@@ -131,27 +198,15 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
     
-    //printf("Core Hamiltonian matrix:\n");
-    //for (int i = 0; i < number_of_MO; ++i) {
-    //    for (int j = 0; j < number_of_MO; ++j) {
-    //        printf("%f ", core_hamiltonian[i * number_of_MO + j]);
-    //    }
-    //    printf("\n");
-    //   
-    //}
     
     // LETS GENERATE A VARIABLE TO STORE THE CORE HAMILTONIAN ENERGY
     
     double E_core_hamiltonian=0.0;
+                        // CALL THE FUNCTION TO COMPUTE THE CORE HAMILTONIAN ENERGY
+    E_core_hamiltonian=fcore_hamiltonian(number_of_MO,core_hamiltonian, number_of_occupied_orbitals);
     
-    for (int i = 0; i < number_of_occupied_orbitals; ++i) {
-        E_core_hamiltonian=E_core_hamiltonian+ 2*core_hamiltonian[i * number_of_MO + i];
-        
-    }
-    // SHOW ONE ELECTRON INTEGRAL ENERGY
-    
-    
-    fprintf(output_file,"Core Hamiltonian Energy: %f a.u. \n", E_core_hamiltonian);
+    // WRITE ONE ELECTRON INTEGRAL ENERGY TO THE OUTPUT.
+    fprintf(output_file,"Core hamiltonian energy: %f a.u. \n", E_core_hamiltonian);
     
     
     // LETS ADD THE CORE HAMILTONIAN ENERGY AND N-N REPULSION ENERGY
@@ -174,14 +229,15 @@ int main(int argc, char* argv[]) {
 	//LETS ALLOCATE THE MEMORY FOR THE INDICES OF THE INTEGRALS and their value
 	double* value = (double*) malloc(number_of_non_zero_integrals * sizeof(double));
 	
-    //if ALOCATION FAIL SHOW
+    //if ALOCATION FAILS SHOW ERROR
 	if (value == NULL) {
 		fprintf(stderr, "Malloc failed for index");
 		exit(1);
 	}
-    	int32_t* const index = malloc(4 * number_of_non_zero_integrals * sizeof(int32_t));
+    
+    int32_t* const index = malloc(4 * number_of_non_zero_integrals * sizeof(int32_t));
 
-    // IF ALOCATION FAIL SHOW
+    // IF ALOCATION FAILS SHOW ERROR
 	if (index == NULL) {
 		fprintf(stderr, "Malloc failed for value");
 		exit(1);
@@ -194,7 +250,6 @@ int main(int argc, char* argv[]) {
     rc = trexio_read_mo_2e_int_eri(trexio_file, offset_file, &buffer_size, index, value);
     
     if (rc != TREXIO_SUCCESS) {
-
         fprintf(stderr, "Error reading two-electron integral values: %s\n", trexio_string_of_error(rc));
         exit(1);
     }
@@ -202,6 +257,7 @@ int main(int argc, char* argv[]) {
  /////////////////////////
     // Allocate memory to store the two electron integrals in a 4D array;
     double**** integrals_4d = (double****)malloc(number_of_MO * sizeof(double***));
+
     for (int i = 0; i < number_of_MO; i++) {
         integrals_4d[i] = (double***)malloc(number_of_MO * sizeof(double**));
         for (int j = 0; j < number_of_MO; j++) {
@@ -235,20 +291,20 @@ int main(int argc, char* argv[]) {
 
     double E_two_electron = 0.0;
 
+                    //CALL FUNCTION TO COMPUTE THE ENERGY CONTRIBUTION OF TWO ELECTRON INTEGRALS
+    E_two_electron=ftwo_electron_contibution(integrals_4d, number_of_occupied_orbitals);
 
-    for (int i = 0; i < number_of_occupied_orbitals; i++) { //JUST RUN OVER THE OCCUPIED ORBITALS
-        for (int j = 0; j < number_of_occupied_orbitals; j++) {
-            E_two_electron = E_two_electron+ 2.0 * integrals_4d[i][j][i][j] - integrals_4d[i][j][j][i];
-        }
-    }
 
-    fprintf(output_file, "Two-Electron Contribution to HF Energy: %f a.u.\n", E_two_electron);
+    fprintf(output_file, "Two-electron contribution to HF energy: %f a.u.\n", E_two_electron);
 
     // Add all contributions to compute the total energy
     total_energy = total_energy +E_two_electron;
 
 
     fprintf(output_file, "HF Energy: %f a.u. \n", total_energy);
+
+
+    //+++++++++++++ MP2 ENERGY CORRECTION ++++++++++++
 
     // LETS COMPUTE NOW THE MP2 CORRECTION,
     // FOR THIS WE NEED TO EXTRACT THE MO ENERGIES \epsilon
@@ -277,28 +333,18 @@ int main(int argc, char* argv[]) {
         exit(1);
     }
 
-
+   
 
     double MP2_energy=0.0;
-
-    for (int i = 0; i < number_of_occupied_orbitals; i++) {  //RUN OVER THE OCCUPIED ORBITALS
-        for (int j = 0; j < number_of_occupied_orbitals; j++) {
-            for (int a = number_of_occupied_orbitals; a < number_of_MO; a++){  // RUN OVER VIRTUAL ORBITALS
-                for (int b = number_of_occupied_orbitals; b < number_of_MO; b++){
-                    
-                    MP2_energy=MP2_energy+(integrals_4d[i][j][a][b]*(2*integrals_4d[i][j][a][b]-integrals_4d[i][j][b][a]))/(mo_energy[i]+mo_energy[j]-mo_energy[a]-mo_energy[b]);
-                    
-                }
-            }
-           
-        }
-    }
+    MP2_energy=fMP2(number_of_occupied_orbitals,number_of_MO,integrals_4d,mo_energy);
 
     fprintf(output_file,"MP2 correction Energy: %f  a.u. \n", MP2_energy);
     //ADD MP2 CORRECTION TO THE TOTAL ENERGY
     total_energy=total_energy+MP2_energy;
 
     fprintf(output_file, "HF Energy with MP2 correction: %f a.u. \n", total_energy);    
+
+    //++++++++++++  FREE ALLOCATED MEMORY +++++++++++++
 
     // FREE ALL ALLOCATED MEMORY
     for (int i = 0; i < number_of_MO; i++) {
@@ -317,12 +363,16 @@ int main(int argc, char* argv[]) {
 
     free(mo_energy);
 
-    // Close the TREXIO file
+    //++++++++++++++   CLOSE OPENED FILES  +++++++++++++++++
+    
+    // CLOSE THE TREXIO FILE
     rc = trexio_close(trexio_file);
     if (rc != TREXIO_SUCCESS) {
         printf("TREXIO Error closing file: %s\n", trexio_string_of_error(rc));
         exit(1);
     }
+    //CLOSE OUTPUT FILE
+    fclose(output_file);
     
     return 0;
 }
