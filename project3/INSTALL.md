@@ -36,7 +36,7 @@ Once compiled the code you can run it by using the following command.
 
 Be awere that you have to run the code where the a.out executable is stored, but you have to specify where the input to be study is stored. An example of use can be found below:
 
-```./a.out /path_where_the_input_to_study_is_stored```
+```./a.out /home/vboxuser/Desktop/ACT/Homework/inputs/inp.txt```
 
 This should generate a .xyz file that later on can be used in softwares such as Molden or Jmol to visualize the simulation.
 
