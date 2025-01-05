@@ -8,13 +8,13 @@ First, clone the repository to your local machine using the following command on
 
 ```git clone https://github.com/aserranoTCCM/ACT-Homeworks```
 
-Once you have the repository downloaded, navigate to the /scr folder containing the code.
+Once you have the repository downloaded, navigate to the /src folder containing the code.
 
 - **1.b) Download only the code and inputs**
 
 This is only mandatory in case you don't want to download the whole repository, if you already downloaded the repository, skip these intructions.
 
-First, navigate in the web version of the repository to the /scr file and download the MD code by clicking on the download button on the top right corner.
+First, navigate in the web version of the repository to the /src file and download the MD code by clicking on the download button on the top right corner.
 
 Second, download the inputs directory in a similar way.
 
