@@ -17,3 +17,19 @@ On macOS:
 ```console
 brew install hdf5
 ```
+Download [TREXIO](https://github.com/TREX-CoE/trexio/releases/download/v2.5.0/trexio-2.5.0.tar.gz) and install it on your system:
+```console
+tar -zxvf trexio-2.5.0.tar.gz
+```
+```console
+cd trexio-2.5.0
+```
+```console
+./configure
+```
+```console
+make
+```
+```console
+sudo make install
+```
