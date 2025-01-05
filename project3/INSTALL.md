@@ -27,3 +27,5 @@ This should generate a a.out code in the directory ready to be executed. In case
 
 ```gcc MD_simulation.c -o YourExecutableName -lm```
 
+In case you cannot compile it using gcc because of not having the compiler intalled, you should install it following the intructions the terminal gives you.
+
