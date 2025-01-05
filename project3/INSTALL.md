@@ -23,11 +23,11 @@ Once you have downloaded the code, inputs and you have found the code in your sy
 
 ```gcc MD_simulation.c -lm```
 
-This should generate an a.out code in the directory ready to be executed. In case you want a different name you can use.
+This should generate an **a.out** code in the directory ready to be executed. In case you want a different name you can use.
 
 ```gcc MD_simulation.c -o YourExecutableName -lm```
 
-In case that you cannot compile it using gcc because of not having the compiler intalled, you should install it following the intructions the terminal provides you.
+In case that you cannot compile it using **gcc** because of not having the compiler intalled, you should install it following the intructions the terminal provides you.
 
 ## Running the code
 Once compiled the code you can run it by using the following command.
@@ -38,7 +38,7 @@ Be awere that you have to run the code where the a.out executable is stored, but
 
 ```./a.out /home/vboxuser/Desktop/ACT/Homework/inputs/inp.txt```
 
-This should generate a .xyz file that later on can be used in softwares such as Molden or Jmol to visualize the simulation.
+This should generate a **.xyz** file that later on can be used in softwares such as **Molden or Jmol** to visualize the simulation.
 
 
 
