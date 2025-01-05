@@ -10,7 +10,7 @@ First, clone the repository to your local machine using the following command on
 
 Once you have the repository downloaded, navigate to the /scr folder containing the code.
 
-- **1.b) Download only the code**
+- **1.b) Download only the code and inputs**
 
 This is only mandatory in case you don't want to download the whole repository, if you already downloaded the repository, skip these intructions.
 
