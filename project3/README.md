@@ -17,3 +17,8 @@ Project 3 consists on the creation of a C code which purpose is to illustrate ke
 - **SRC directory:** This directory is used to store all the relevant source files of the program.
 
 - **Authors.md:** In this file, all the collaborators that have worked on the code can be found.
+
+
+# Code Explanation
+
+
