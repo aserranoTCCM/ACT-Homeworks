@@ -48,5 +48,4 @@ For example, to calculate the MP2 energy of water type:
 ```console
 ./MP2_Lucia_Alvaro_Ander h2o.h5 H2O.out
 ```
-
-
+This should generate a H2O.out file with the corresponding HF and MP2 energies.
