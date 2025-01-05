@@ -5,7 +5,7 @@ To download the code you can download it directly from the GitHub or you can dow
 wget https://github.com/aserranoTCCM/ACT-Homeworks/blob/master/project1/MP2_Lucia_Alvaro_Ander.c
 ```
 
-# Compilation.
+# Compilation and running the code.
 To compile the code is necesarry to have installed the [TREXIO](https://github.com/TREX-CoE/trexio) library. 
 
 TREXIO depends on the HDF5 library, which can be installed using your
@@ -34,4 +34,8 @@ make
 sudo make install
 ```
 
-This installs the TREXIO library to /usr/local/lib. Documentation for TREXIO is available [here](https://trex-coe.github.io/trexio/.)
+This installs the TREXIO library to /usr/local/lib. Documentation for TREXIO is available [here](https://trex-coe.github.io/trexio/.).
+
+To compile the code just type:
+
+
