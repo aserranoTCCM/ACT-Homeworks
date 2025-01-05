@@ -6,11 +6,9 @@ Project 3 consists on the creation of a C code which purpose is to illustrate ke
 
 **A breakdown of each file can be found below.**
 
-- INSTALL.md:
-The purpose of this file is to bring clear instructions on how to compile and run the program. In addition a short explanation of how to use github will be given as well.
+- **INSTALL.md:** The purpose of this file is to bring clear instructions on how to compile and run the program. In addition a short explanation of how to use github will be given as well.
 
-## Dynamics.pdf
-This is the file from where the instructions of how to make the Molecular Dynamic code have been followed. In it we can find all the formulas and algorithm used.
+- **Dynamics.pdf** This is the file from where the instructions of how to make the Molecular Dynamic code have been followed. In it we can find all the formulas and algorithm used.
 
 ## Inputs directory
 This directory is used to store all the input used to test the code. It it we can find the original Ar input as well as other ones.
