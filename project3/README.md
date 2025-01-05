@@ -6,7 +6,7 @@ Project 3 consists on the creation of a C code which purpose is to illustrate ke
 
 **A breakdown of each file can be found below.**
 
-## INSTALL.md
+- INSTALL.md:
 The purpose of this file is to bring clear instructions on how to compile and run the program. In addition a short explanation of how to use github will be given as well.
 
 ## Dynamics.pdf
