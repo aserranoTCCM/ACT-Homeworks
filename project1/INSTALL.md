@@ -17,7 +17,7 @@ On macOS:
 ```console
 brew install hdf5
 ```
-Download [TREXIO](https://github.com/TREX-CoE/trexio/releases/download/v2.5.0/trexio-2.5.0.tar.gz) and install it on your system:
+Download TREXIO [here](https://github.com/TREX-CoE/trexio/releases/download/v2.5.0/trexio-2.5.0.tar.gz) and install it on your system:
 ```console
 tar -zxvf trexio-2.5.0.tar.gz
 ```
@@ -33,3 +33,5 @@ make
 ```console
 sudo make install
 ```
+
+This installs the TREXIO library to /usr/local/lib. Documentation for TREXIO is available [here](https://trex-coe.github.io/trexio/.)
