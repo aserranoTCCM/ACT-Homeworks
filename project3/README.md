@@ -14,6 +14,6 @@ Project 3 consists on the creation of a C code which purpose is to illustrate ke
 
 - **Tests directory:** This directory is used to store all the trajectories calculated with the code. The purpose of each trajectory is to later on use it on an external software to visualize the dynamic.
 
-- **src directory:** This directory is used to store all the relevant source files of the program.
+- **SRC directory:** This directory is used to store all the relevant source files of the program.
 
 - **Authors.md:** In this file, all the collaborators that have worked on the code can be found.
