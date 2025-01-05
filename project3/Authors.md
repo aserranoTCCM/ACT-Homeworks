@@ -1,4 +1,4 @@
 The people involved in the development of project 3 are the following ones:
 
-# Authors
+# AUTHORS
 
