@@ -23,7 +23,7 @@ Once you have downloaded the code, inputs and you have found the code in your sy
 
 ```gcc MD_simulation.c -lm```
 
-This should generate a a.out code in the directory ready to be executed. In case you want a different name you can use.
+This should generate an a.out code in the directory ready to be executed. In case you want a different name you can use.
 
 ```gcc MD_simulation.c -o YourExecutableName -lm```
 
