@@ -4,8 +4,16 @@ Project 3 consists on a C code used to run Molecular Dynamics by using the Verle
 ### 1. Download and access to the necessary files
 - **1.a) Clone the Repository**
 
-First, clone the repostory to your local machine using the following command on the terminal:
+First, clone the repository to your local machine using the following command on the terminal:
 
 ```git clone https://github.com/aserranoTCCM/ACT-Homeworks```
 
-- **1.b) Download only the code**  
+Once you have the repository downloaded, navigate to the /scr folder containing the code.
+
+- **1.b) Download only the code**
+
+This is only mandatory in case you don't want to download the whole repository, if you already downloaded the repository, skip these intructions.
+
+First, navigate in the web version of the repository to the /scr file and download the MD code by clocking on the download button on the top right corner.
+
+Second, download the inputs directory in a similar way.
