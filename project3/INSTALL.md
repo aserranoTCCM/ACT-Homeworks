@@ -27,5 +27,14 @@ This should generate a a.out code in the directory ready to be executed. In case
 
 ```gcc MD_simulation.c -o YourExecutableName -lm```
 
-In case you cannot compile it using gcc because of not having the compiler intalled, you should install it following the intructions the terminal gives you.
+In case that you cannot compile it using gcc because of not having the compiler intalled, you should install it following the intructions the terminal gives you.
+
+### 3. Running the code
+Once compiled the code you can run it by using the following command.
+
+```./a.out /path_where_the_input_to_study_is_stored```
+
+
+
+
 
