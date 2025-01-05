@@ -19,3 +19,11 @@ First, navigate in the web version of the repository to the /src file and downlo
 Second, download the inputs directory in a similar way.
 
 ### 2. Compiling the code
+Once you have downloaded the code, inputs and you have found the code in your system use the following command to compile it.
+
+```gcc MD_simulation.c -lm```
+
+This should generate a a.out code in the directory ready to be executed. In case you want a different name you can use.
+
+```gcc MD_simulation.c -o YourExecutableName -lm```
+
