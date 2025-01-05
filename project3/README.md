@@ -6,12 +6,12 @@ Project 3 consists on the creation of a C code which purpose is to illustrate ke
 
 **A breakdown of each file can be found below.**
 
-### INSTALL.md
+## INSTALL.md
 
-### Dynamics.pdf
+## Dynamics.pdf
 
-### Inputs directory
+## Inputs directory
 
-### Tests directory
+## Tests directory
 
-### Authors.md
+## Authors.md
