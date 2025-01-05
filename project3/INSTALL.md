@@ -18,7 +18,7 @@ First, navigate in the web version of the repository to the /src file and downlo
 
 Second, download the inputs directory in a similar way.
 
-### 2. Compiling the code
+## Compiling the code
 Once you have downloaded the code, inputs and you have found the code in your system use the following command to compile it.
 
 ```gcc MD_simulation.c -lm```
@@ -29,7 +29,7 @@ This should generate a a.out code in the directory ready to be executed. In case
 
 In case that you cannot compile it using gcc because of not having the compiler intalled, you should install it following the intructions the terminal gives you.
 
-### 3. Running the code
+## Running the code
 Once compiled the code you can run it by using the following command.
 
 ```./a.out /path_where_the_input_to_study_is_stored```
