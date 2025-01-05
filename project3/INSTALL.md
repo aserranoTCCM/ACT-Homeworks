@@ -1,4 +1,4 @@
-Project 3 consists on a C code used to run Molecular Dynamics by using the Verlet Algorithm. Here a detailed explanation of how to run the code can be found.
+Project 3 consists on a C code used to run Molecular Dynamics by using the Verlet Algorithm. Here a detailed explanation of how to run the code can be found. Operational system recommended, GNU/Linux.
 
 ## Getting Started
 ### 1. Download and access to the necessary files
@@ -6,7 +6,7 @@ Project 3 consists on a C code used to run Molecular Dynamics by using the Verle
 
 First, clone the repository to your local machine using the following command on the terminal:
 
-console git clone https://github.com/aserranoTCCM/ACT-Homeworks
+```git clone https://github.com/aserranoTCCM/ACT-Homeworks```
 
 Once you have the repository downloaded, navigate to the /src folder containing the code.
 
