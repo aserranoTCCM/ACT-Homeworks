@@ -14,6 +14,6 @@ Once you have the repository downloaded, navigate to the /scr folder containing 
 
 This is only mandatory in case you don't want to download the whole repository, if you already downloaded the repository, skip these intructions.
 
-First, navigate in the web version of the repository to the /scr file and download the MD code by clocking on the download button on the top right corner.
+First, navigate in the web version of the repository to the /scr file and download the MD code by clicking on the download button on the top right corner.
 
 Second, download the inputs directory in a similar way.
