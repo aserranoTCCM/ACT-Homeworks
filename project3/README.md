@@ -27,4 +27,4 @@ To begin with the explanation, here we present a Molecular Dynamics code that si
 
 **Below a breakdown of the code can be found.**
 
-### Reading in the input
+### -Reading in the input-
