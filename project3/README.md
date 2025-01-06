@@ -58,7 +58,7 @@ And the piece of code that performs this is:
 
 ![4](https://github.com/user-attachments/assets/cb64a6d3-c97d-4673-906a-59997f3ecbaa)
 
-Here we need to make use of the distances array as well as the epsilon and sigma values. 
+Here we need to make use of the distances array as well as the epsilon, sigma values and number of atoms. Following the formulas we make two loops, one from **i = 0** to less than the number of atoms and another one from **j=i+1** to less than the number of atoms applying the pow(x,n) operation to the power of numbers and applying the potential energy formula, adding togheter the results for each r (distance of atom pair).
 
 
 
