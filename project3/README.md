@@ -94,7 +94,7 @@ The said block of lines is found below:
 ![7](https://github.com/user-attachments/assets/190f1fe5-4868-4ce2-9678-3836ef633a14)
 ![8](https://github.com/user-attachments/assets/5d77d510-ea47-4294-a978-4c0be7c7afd3)
 
-What this piece of code does is the following. First, the calculation is initialized with the initial coordiantes of the molecule equal to the ones that were read and vi = 0, and immediately then we compute the acceleration vector.
+What this piece of code does is the following. First, the calculation is initialized with the initial coordiantes of the molecule equal to the ones that were read and v(i) = 0, and immediately then we compute the acceleration vector.
 
     // Compute initial accelerations
     compute_acc(Natoms, coord, mass, distance, acceleration);
