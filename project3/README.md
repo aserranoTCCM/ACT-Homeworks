@@ -43,8 +43,8 @@ Once we have all the data, we can proceed to calculate the internuclear distance
 
 ![3](https://github.com/user-attachments/assets/541d906f-e538-4959-ac58-698982f49ab7)
 
-Concretelly, what this does is to read line by line for i and line by line but for j=i+1, being i the first line of the coord array, and then calculate the distance of the vector between the two atoms as formula states.
+Concretelly, what this does is to read line by line for **i** and line by line but for **j=i+1**, being i the first line of the coord array, and then calculate the distance of the vector between the two atoms as the formula states.
 
 ![dist](https://github.com/user-attachments/assets/8ecfb9b6-b163-49dd-b4ee-7af7065cdca4)
 
-We do for each i a scan of all other j (j=i+1, j++), and we calculate the differences, paying attention not to make redundant operations.
+We do for each **i** a scan of all other **j (j=i+1, j++)**, and we calculate the differences and later on the distance, paying attention not to make redundant operations.
