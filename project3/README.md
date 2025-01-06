@@ -23,9 +23,7 @@ Project 3 consists on the creation of a C code which purpose is to illustrate ke
 
 This section is used to explain the key features of the code.
 
-To begin with the explanation, here we present a Molecular Dynamics code that simulates the movement of atoms based on their initial positions and velocites. 
-
-Specifically, a program that illustrates key concepts in MD simulations has been developed. The program reads force field parameters as well as the initial positions of atoms from an input file and after each small displacement of atoms according to their velocities, the updated coordinates will be saved to an output file, enabling the creation of a video animation with an external tool such as Jmol or Molden.
+To begin with the explanation, here we present a Molecular Dynamics code that simulates the movement of atoms based on their initial positions and velocites. Specifically, a program that illustrates key concepts in MD simulations has been developed. The program reads force field parameters as well as the initial positions of atoms from an input file and after each small displacement of atoms according to their velocities, the updated coordinates will be saved to an output file, enabling the creation of a video animation with an external tool such as Jmol or Molden.
 
 **Below a breakdown of the code can be found.**
 
