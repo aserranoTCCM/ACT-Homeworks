@@ -107,7 +107,7 @@ Then we start the biggest loop, that makes the first step of the coordinates to 
             }
         }
 
-As it can be seen that works for all the atoms. We now compute the new distances, store old accelerations, we recalculate the accelerations but with new data and we update the velocities with the use, again of two loops.
+As it can be seen, that works for all the atoms, the first loops does exactly that, but we have to pay special attention into the second loop, that goes until **j<3**, this is so because it iterates over the three Cartesian coordiantes of each atom. We now compute the new distances, store old accelerations, we recalculate the accelerations but with new data and we update the velocities with the use, again of two loops.
 
         for (size_t i = 0; i < Natoms; i++) {
             for (size_t j = 0; j < 3; j++) {
