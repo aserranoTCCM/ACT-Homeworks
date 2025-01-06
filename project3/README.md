@@ -74,8 +74,9 @@ The piece of code that does this is the following one:
 This consists on two functions being the first one to calculate the kinetic energy where we make use of a loop throughout the velocities array which is originally set to 0.
 
 ## -Computing the acceleration-
+Now we move on to computing the acceleration as the formula below shows.
 
-
+![acceleration](https://github.com/user-attachments/assets/cc176c14-d5f2-474a-8617-ac26dc125cc5)
 
 
 
