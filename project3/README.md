@@ -28,3 +28,5 @@ To begin with the explanation, here we present a Molecular Dynamics code that si
 **Below a breakdown of the code can be found.**
 
 ### -Reading in the input-
+The first thing to do for our program to work is read in the number of atoms, coordinates and mass for the specific molecule. The corresponding lines that perform this action can be found next.
+
