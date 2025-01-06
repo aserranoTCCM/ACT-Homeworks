@@ -84,7 +84,7 @@ This is the analytical expression and it is applied in the code with the followi
 
 As we can see this procedure is similar to the one of Lennard-Jones, we again need the distances array and coordinates as well as the sigma and epsilon values. Then the formula is applied by the use of two loops. Finally computing the acceleration vector for each atom and storing it in a double precision array.
 
-
+## -Implementing the molecular dynamics-
 
 
 
