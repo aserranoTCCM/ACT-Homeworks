@@ -67,6 +67,9 @@ Now we write functions to calculate the Kinetic energy and total energy. For thi
 
 ![total](https://github.com/user-attachments/assets/058ea22d-14c5-484b-92b0-6f056f334997)
 
+The piece of code that does this is the following one:
+
+![5](https://github.com/user-attachments/assets/a344edfd-d92d-45d6-92dc-fccf23298d15)
 
 
 
