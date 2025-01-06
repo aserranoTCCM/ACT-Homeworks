@@ -27,7 +27,7 @@ To begin with the explanation, here we present a Molecular Dynamics code that si
 
 **Below a breakdown of the code can be found.**
 
-### -Reading in the input-
+## -Reading in the input-
 The first thing to do for our program to work is to read in the number of atoms, coordinates and mass for the specific molecule (input). The corresponding lines that perform these actions can be found next.
 
 ![1](https://github.com/user-attachments/assets/5ffac3c6-c0c0-458d-b66c-13e1ccfec4f0)
@@ -38,7 +38,7 @@ This first block of lines with the corresponding ones in /int main/ are in charg
 
 Then this block of lines is in charge of reading in the coordinates and mass for each atom. Specifically, what it does is to read line by line depending on the number of atoms (number of atoms = number of lines) and stores in a coordiantes array the coordinates of the atom (coord[i][0] ...) and in a mass array the mass.
 
-### -Calculation of distances-
+## -Calculation of distances-
 Once we have all the data, we can proceed to calculate the internuclear distances between each pair of atoms.
 
 ![3](https://github.com/user-attachments/assets/541d906f-e538-4959-ac58-698982f49ab7)
@@ -49,7 +49,7 @@ Concretelly, what this does is to read line by line for **i** and line by line b
 
 We do for each **i** a scan of all other **j (j=i+1, j++)**, and we calculate the differences and later on the distance, paying attention not to make redundant operations. In order to use the sqrt function in C we need to include <math.h>, therefore compiling using the -lm option. Finally, storing the distances in a distance array.
 
-### -Calculation of the Lennard-Jones potential-
+## -Calculation of the Lennard-Jones potential-
 Once calculated the distances, we are able to calculate the potential energy of the system with the following formulas.
 
 ![lena](https://github.com/user-attachments/assets/88f5ee8b-b5c6-4994-b857-61c3cad8abd4)
@@ -60,7 +60,7 @@ And the piece of code that performs this is:
 
 Here we need to make use of the distances array as well as the epsilon, sigma values and number of atoms. Following the formulas we make two loops, one from **i = 0** to less than the number of atoms and another one from **j=i+1** to less than the number of atoms applying the pow(x,n) operation to the power of numbers and applying the potential energy formula, adding togheter the results for each r (distance of atom pair).
 
-### -Calculation of the Kinetic energy and Total energy of the system-
+## -Calculation of the Kinetic energy and Total energy of the system-
 
 
 
