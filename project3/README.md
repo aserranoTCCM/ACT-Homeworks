@@ -85,7 +85,14 @@ This is the analytical expression and it is applied in the code with the followi
 As we can see this procedure is similar to the one of Lennard-Jones, we again need the distances array and coordinates as well as the sigma and epsilon values. Then the formula is applied by the use of two loops. Finally computing the acceleration vector for each atom and storing it in a double precision array.
 
 ## -Implementing the molecular dynamics-
+Finally, we arrive to the block of lines that implements the actual molecular dynamic. The molecular dynamic performed is based on the Verlet algorithm, which updates the position and velocity of each atom at each time step. The algorithm consists of two main equations.
 
+![verlet](https://github.com/user-attachments/assets/940f44aa-2430-4ce0-9907-a14d2373bf09)
+
+The said block of lines is found below:
+
+![7](https://github.com/user-attachments/assets/190f1fe5-4868-4ce2-9678-3836ef633a14)
+![8](https://github.com/user-attachments/assets/5d77d510-ea47-4294-a978-4c0be7c7afd3)
 
 
 
