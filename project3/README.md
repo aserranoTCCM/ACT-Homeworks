@@ -47,7 +47,7 @@ Concretelly, what this does is to read line by line for **i** and line by line b
 
 ![dist](https://github.com/user-attachments/assets/8ecfb9b6-b163-49dd-b4ee-7af7065cdca4)
 
-We do for each **i** a scan of all other **j (j=i+1, j++)**, and we calculate the differences and later on the distance, paying attention not to make redundant operations. In order to use the sqrt function in C we need to include <math.h>, therefore compiling using the -lm option.
+We do for each **i** a scan of all other **j (j=i+1, j++)**, and we calculate the differences and later on the distance, paying attention not to make redundant operations. In order to use the sqrt function in C we need to include <math.h>, therefore compiling using the -lm option. Finally, storing the distances in a distance array.
 
 ### -Calculation of the Lennard-Jones potential-
 Once calculated the distances, we are able to calculate the potential energy of the system with the following formulas.
