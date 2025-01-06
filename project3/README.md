@@ -34,6 +34,7 @@ The first thing to do for our program to work is to read in the number of atoms,
 
 This first block of lines with the corresponding ones in /int main/ are in charge of reading the first line of the input in order to get the number of atoms for the specific molecule. It uses the prototype specified in the dynamics.pdf explanation and in addition handles some erros as for example reading in a negative number of atoms.
 
+![2](https://github.com/user-attachments/assets/2a492804-0a14-42f3-a54e-f0d02e395bd5)
 
 
 
