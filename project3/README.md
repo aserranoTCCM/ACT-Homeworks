@@ -61,6 +61,17 @@ And the piece of code that performs this is:
 Here we need to make use of the distances array as well as the epsilon, sigma values and number of atoms. Following the formulas we make two loops, one from **i = 0** to less than the number of atoms and another one from **j=i+1** to less than the number of atoms applying the pow(x,n) operation to the power of numbers and applying the potential energy formula, adding togheter the results for each r (distance of atom pair).
 
 ## -Calculation of the Kinetic energy and Total energy of the system-
+Now we write functions to calculate the Kinetic energy and total energy. For this we apply the following formulas.
+
+![kinetic](https://github.com/user-attachments/assets/660db2fb-43d9-4264-a85f-e27292e8d67c)
+
+![total](https://github.com/user-attachments/assets/058ea22d-14c5-484b-92b0-6f056f334997)
+
+
+
+
+
+
 
 
 
