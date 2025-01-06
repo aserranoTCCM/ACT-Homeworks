@@ -78,5 +78,14 @@ Now we move on to computing the acceleration as the formula below shows.
 
 ![acceleration](https://github.com/user-attachments/assets/cc176c14-d5f2-474a-8617-ac26dc125cc5)
 
+This is the analytical expression and it is applied in the code with the following lines:
+
+![6](https://github.com/user-attachments/assets/70ef2957-d8c4-4456-93b2-632d00e363e3)
+
+
+
+
+
+
 
 
