@@ -94,5 +94,33 @@ The said block of lines is found below:
 ![7](https://github.com/user-attachments/assets/190f1fe5-4868-4ce2-9678-3836ef633a14)
 ![8](https://github.com/user-attachments/assets/5d77d510-ea47-4294-a978-4c0be7c7afd3)
 
+What this piece of code does is the following. First, the calculation is initialized with the initial coordiantes of the molecule equal to the ones that were read and vi = 0, and immediately then we compute the acceleration vector.
+
+    // Compute initial accelerations
+    compute_acc(Natoms, coord, mass, distance, acceleration);
+
+Then we start the biggest loop, that makes the first step of the coordinates to be calculated by the use of two smaller loops.
+
+        for (size_t i = 0; i < Natoms; i++) {
+            for (size_t j = 0; j < 3; j++) {
+                coord[i][j] += velocity[i][j] * time_step + 0.5 * acceleration[i][j] * time_step * time_step;
+            }
+        }
+
+As it can be seen that works for all the atoms. We now compute the new distances, store old accelerations, we recalculate the accelerations but with new data and we update the velocities with the use, again of two loops.
+
+        for (size_t i = 0; i < Natoms; i++) {
+            for (size_t j = 0; j < 3; j++) {
+                velocity[i][j] += 0.5 * (old_acceleration[i][j] + acceleration[i][j]) * time_step;
+            }
+        }
+
+Then we free the old accelerations and compute the energies using existent functions but with the data of each iteration. In the end writing the information into a file every 10 steps. The loop continues for 1000 steps with a time step of 0'2.
+
+
+
+
+
+
 
 
