@@ -36,7 +36,7 @@ This first block of lines with the corresponding ones in /int main/ are in charg
 
 ![2](https://github.com/user-attachments/assets/2a492804-0a14-42f3-a54e-f0d02e395bd5)
 
-
+Then this block of lines is in charge of reading in the coordinates and mass for each atom. Specifically, what it does is to read line by line depending on the number of atoms (number of atoms = number of lines) and stores in a coordiantes array the coordinates of the atom (coord[i][0] ...) and in a mass array the mass.
 
 
 
