@@ -28,11 +28,11 @@ To begin with the explanation, here we present a Molecular Dynamics code that si
 **Below a breakdown of the code can be found.**
 
 ### -Reading in the input-
-The first thing to do for our program to work is read in the number of atoms, coordinates and mass for the specific molecule. The corresponding lines that perform this action can be found next.
-
-
+The first thing to do for our program to work is to read in the number of atoms, coordinates and mass for the specific molecule. The corresponding lines that perform these actions can be found next.
 
 ![1](https://github.com/user-attachments/assets/5ffac3c6-c0c0-458d-b66c-13e1ccfec4f0)
+
+This first block of lines is in charge of reading the first line of the input in order to get the number of atoms for the specific molecule. It uses the prototype specified in the dynamics.pdf explanation and in addition handles some erros as for example reading in a negative number of atoms.
 
 
 
