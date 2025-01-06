@@ -71,7 +71,7 @@ The piece of code that does this is the following one:
 
 ![5](https://github.com/user-attachments/assets/a344edfd-d92d-45d6-92dc-fccf23298d15)
 
-
+This consists on two functions being the first one to calculate the kinetic energy where we make use of a loop throughout the velocities array which is originally set to 0.
 
 
 
