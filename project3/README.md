@@ -82,7 +82,7 @@ This is the analytical expression and it is applied in the code with the followi
 
 ![6](https://github.com/user-attachments/assets/70ef2957-d8c4-4456-93b2-632d00e363e3)
 
-
+As we can see this procedure is similar to the one of Lennard-Jones, we again need the distances array and coordinates as well as the sigma and epsilon values. Then the formula is applied by the use of two loops. Finally computing the acceleration vector for each atom and storing it in a double precision array.
 
 
 
