@@ -17,9 +17,6 @@ This code is part of the Advanced Computational Techniques homework. The goal of
 - **Authors.md:** In this file, all the collaborators that have worked on the code can be found.
 
 
-## Code.
-
-
 ## Bibliography.
 Posenitskiy, E., Chilkuri, V. G., Ammar, A., Hapka, M., Pernal, K., Shinde, R., Landinez Borda, E. J., Filippi, C., Nakano, K., Kohulák, O., Sorella, S., de Oliveira Castro, P., Jalby, W., López Ríos, P., Alavi, A., & Scemama, A. (2023). **TREXIO: A file format and library for quantum chemistry**. *J. Chem. Phys.*, 158(17). AIP Publishing. https://doi.org/10.1063/5.0148161
 
