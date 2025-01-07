@@ -12,7 +12,7 @@ This code is part of the Advanced Computational Techniques homework. The goal of
 
 - **output directory:** This directory is used to store all the outputs calculated with the code.
 
-- **SRC directory:**  The C code can be found inside this directory.
+- **src directory:**  The C code can be found inside this directory.
 
 - **Authors.md:** In this file, all the collaborators that have worked on the code can be found.
 
