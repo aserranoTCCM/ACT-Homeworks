@@ -39,10 +39,10 @@ In case that you cannot compile it using **gcc** because of not having the compi
 Once compiled the code you can run it by using the following command.
 
 ```console
-./a.out /path_where_the_input_to_study_is_stored
+./a.out /path_where_the_input_to_study_is_stored/inp.txt
 ```
 
-Be awere that you have to run the code where the a.out executable is stored, but you have to specify where the input to be study is stored. An example of use can be found below:
+Be aware that you have to run the code where the a.out executable is stored, but you have to specify where the input to be study is stored. An example of use can be found below:
 
 ```console
 ./a.out /home/vboxuser/Desktop/ACT/Homework/inputs/inp.txt
