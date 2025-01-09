@@ -6,8 +6,8 @@ This code is part of the Advanced Computational Techniques homework. The goal of
 
 - **INSTALL.md:** The purpose of this file is to bring clear instructions on how to compile and run the program. In addition a short explanation of how to use github will be given as well.
 
-- **mp2.pdf:** This is the file from where the instructions of how to make the MP2 code have been followed. In it we can find all the formulas and algorithm used.
-
+- **mp2.pdf:** This is the file containing the instructions for creating the MP2 code. It includes all the formulas and algorithms used.
+  
 - **data directory:** This directory is used to store all the inputs used to test the code.
 
 - **output directory:** This directory is used to store all the outputs calculated with the code.
