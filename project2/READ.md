@@ -250,9 +250,9 @@ This program is a comprehensive demonstration of matrix multiplication technique
 	
 An example can be found in the following graph. I multiplied every 125x125 matrix from the output folder with each other and compare how much time it took for the multiplication to end for each of the three multiplication methods. 
 
-![[IMAGES/image.png]]
+![Graph1](IMAGES/image.png)
 
 Here we can see that the sparse multiplication method is very efficient when the degree of filling is very small. Once this percentage is increased, the timing scales the most. 
 Out of the dense multiplication routines, the DGEMM routine is a little bit more efficient than the handwritten one. Their efficiency stays similiar when the filling percentage of the resulting matrices increases. 
 Here is a more detailed graph were we can see that the sparse method is more efficient for "emptier" matrices than multiplicating them in a dense format. 
-![[IMAGES/actfortran.png]] 
+![Graph2](IMAGES/actfortran.png) 
