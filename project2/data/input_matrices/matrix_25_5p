@@ -1,8 +1,3 @@
-  random matrices with different degrees of filling 
-  please give a random fraction, between zero and 1
-  random_fraction, scalefactor =    5.0000000000000003E-002   20.000000000000000     
-  please give the matrix dimension 
-  matrix will have dimension           25  x           25
            1          25  0.55636063218116760     
            2          14  0.38961492478847504     
            3           4  0.79907380044460297     
